@@ -1,0 +1,26 @@
+{
+  "name": "sdg17-partnership-hub",
+  "version": "1.0.0",
+  "description": "SDG 17 Partnership Hub — Partnerships for the Goals",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "test:api": "node server/scripts/test-api.js",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "sdg17",
+    "un-goals",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "partnership-hub"
+  ],
+  "author": "",
+  "license": "ISC"
+}
