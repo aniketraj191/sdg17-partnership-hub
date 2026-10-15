@@ -16,9 +16,9 @@ export const connectDB = async () => {
     if (!isPlaceholder) {
       console.log('Connecting to MongoDB Atlas at configured MONGODB_URI...');
       const conn = await mongoose.connect(uri, {
-        serverSelectionTimeoutMS: 8000,
+        serverSelectionTimeoutMS: 30000,
       });
-      console.log(`[Database] MongoDB Connected: ${conn.connection.host} (Database: ${conn.connection.name})`);
+      console.log(`[Database] MongoDB Connected successfully: ${conn.connection.host} (Database: ${conn.connection.name})`);
       return conn;
     } else {
       console.log('[Database] Notice: MONGODB_URI has placeholder credentials.');
