@@ -3,6 +3,10 @@ import mongoose from 'mongoose';
 let memoryServer = null;
 
 export const connectDB = async () => {
+  if (mongoose.connection && mongoose.connection.readyState >= 1) {
+    return mongoose.connection;
+  }
+
   const uri = process.env.MONGODB_URI;
 
   try {
